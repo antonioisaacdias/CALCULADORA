@@ -7,62 +7,69 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         table {
-            margin: 20px;
             background-color: #444444;
             border-collapse: collapse;
-            border: 10px solid #444444;
-
+            border: 1vh solid #444444;
+            height: 40vh;
+            width: 40vh;
+            margin: auto;
+            margin-top: 20vh;
         }
         button {
-            width: 58px;
+            width: 100%;
+            height: 100%;
         }
-        #buttonIgual {
-            height: 77px;
-        }
-        #button0, #buttonC {
-            width: 118px;
-        }
+
         #buttonC, #buttonCE, #buttonDiv, #buttonMul, #buttonMais, #buttonMenos{
            background-color: #f79c42;
            border-color: #f79c42;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: darkgrey;
+        }
+        
+        #inputCalculadora {
+            height: 100%;
         }
 
     </style>
 </head>
 <body>
-    <script src="app.js"></script>
     <table>
         <tr>
             <th colspan="4"><input type="text" id="inputCalculadora" class="form-control text-right" disabled></th>
         </tr>
         <tr>
-            <th colspan="2"><button id="buttonC" class="btn btn-secondary" onclick="limparTela()">C</button></th>
-            <th><button id="buttonDiv" class="btn btn-secondary" onclick="adicionarOperador('divisao')">/</button></th>
-            <th><button id="buttonMul" class="btn btn-secondary" onclick="adicionarOperador('multiplicacao')">*</button></th>
+            <th colspan="2"><button id="buttonC" class="btn btn-secondary">C</button></th>
+            <th><button id="buttonDiv" class="btn btn-secondary">/</button></th>
+            <th><button id="buttonMul" class="btn btn-secondary">*</button></th>
         </tr>
         <tr>
-            <th><button id="button7" class="btn btn-light" onclick="adicionarNumero(7)">7</button></th>
-            <th><button id="button8" class="btn btn-light" onclick="adicionarNumero(8)">8</button></th>
-            <th><button id="button9" class="btn btn-light" onclick="adicionarNumero(9)">9</button></th>
-            <th><button id="buttonMenos" class="btn btn-secondary" onclick="adicionarOperador('subtracao')">-</button></th>
+            <th><button id="button7" class="btn btn-light">7</button></th>
+            <th><button id="button8" class="btn btn-light">8</button></th>
+            <th><button id="button9" class="btn btn-light">9</button></th>
+            <th><button id="buttonMenos" class="btn btn-secondary">-</button></th>
         </tr>
         <tr>
-            <th><button id="button4" class="btn btn-light" onclick="adicionarNumero(4)">4</button></th>
-            <th><button id="button5" class="btn btn-light" onclick="adicionarNumero(5)">5</button></th>
-            <th><button id="button6" class="btn btn-light" onclick="adicionarNumero(6)">6</button></th>
-            <th><button id="buttonMais" class="btn btn-secondary" onclick="adicionarOperador('soma')">+</button></th>
+            <th><button id="button4" class="btn btn-light">4</button></th>
+            <th><button id="button5" class="btn btn-light">5</button></th>
+            <th><button id="button6" class="btn btn-light">6</button></th>
+            <th><button id="buttonMais" class="btn btn-secondary">+</button></th>
         </tr>
         <tr>
-            <th><button id="button1" class="btn btn-light" onclick="adicionarNumero(1)">1</button></th>
-            <th><button id="button2" class="btn btn-light" onclick="adicionarNumero(2)">2</button></th>
-            <th><button id="button3" class="btn btn-light" onclick="adicionarNumero(3)">3</button></th>
+            <th><button id="button1" class="btn btn-light">1</button></th>
+            <th><button id="button2" class="btn btn-light">2</button></th>
+            <th><button id="button3" class="btn btn-light">3</button></th>
             <th rowspan="2"><Button id="buttonIgual" class="btn btn-primary" onclick="consolidarOperacao()">=</Button></th>
         </tr>
         <tr>
-            <th colspan="2"><button id="button0" class="btn btn-light" onclick="adicionarNumero(0)">0</button></th>
-            <th><button id="button." class="btn btn-light" onclick="adicionarPonto()">.</button></th>
+            <th colspan="2"><button id="button0" class="btn btn-light">0</button></th>
+            <th><button id="buttonPonto" class="btn btn-light">.</button></th>
         </tr>
-
     </table>
+    <script src="app.js"></script>
 </body>
 </html>
